@@ -7,8 +7,8 @@ import Image from 'next/image';
 const Slider: React.FC = () => {
   const images = [
     '/images/error.jpg',
-    '/images/error2.jpg'
-    
+    '/images/error2.jpg',
+    '/images/error3.jpg',
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -16,7 +16,7 @@ const Slider: React.FC = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 1000); 
+    }, 3000); 
     return () => clearInterval(interval);
   }, [images.length]);
 
